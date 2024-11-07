@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Park Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Theme Park Online Booking</h1>
+        
+        <form id="booking-form" action="book_ticket.php" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required><br>
+            
+            <label for="ticket-type">Select Ticket Type:</label>
+            <select id="ticket-type" name="ticket_type" required>
+                <option value="single">Single Day Ticket</option>
+                <option value="family">Family Pack</option>
+                <option value="vip">VIP Ticket</option>
+            </select><br>
+            
+            <button type="submit">Book Ticket</button>
+        </form>
+        
+        <div id="confirmation" style="display:none;">
+            <h2>Your Booking is Confirmed!</h2>
+            <p>Thank you for booking with us. Your ticket will be sent to your email.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
